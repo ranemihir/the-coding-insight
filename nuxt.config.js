@@ -112,9 +112,9 @@ module.exports = {
     */
     // analyze: true,
     /**
-     * ! NOTE: Uncomment this for production build
+     * Uncomment below statement Extract css into a single file
      */
-    extractCSS: true,
+    // extractCSS: true,
     extend (config, { isClient, isServer }) {
       config.resolve.alias.vue$ = path.resolve(__dirname, './node_modules/vue/dist/vue.esm.js')
     }

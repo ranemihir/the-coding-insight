@@ -7,9 +7,9 @@
     <h1 v-else-if="error.message !== null">
       {{ error.message }}
     </h1>
-    <nuxt-link to="/">
+    <v-btn style="margin-top: 4px" @click="navigateToHome()">
       Home
-    </nuxt-link>
+    </v-btn>
   </div>
 </template>
 
@@ -21,6 +21,14 @@ export default {
       default: null
     }
   },
-  layout: 'default'
+  layout: 'default',
+  methods: {
+    /**
+     * Navigates to '/' route.
+     */
+    navigateToHome () {
+      return this.$router.push('/')
+    }
+  }
 }
 </script>
