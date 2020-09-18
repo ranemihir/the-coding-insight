@@ -1,7 +1,7 @@
-![The Coding Insight](./src/static/logo.svg)
+![The Coding Insight](https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/GitVector.svg?alt=media&token=73612b13-5072-4e0e-8b0f-baea8a7c238b)
 
 # The Coding Insight
-The Coding Insight is my personal blogging website about technology and computer programming.
+The Coding Insight is a blogging website about technology and computer programming.
 
 Website Link : [https://thecodinginsight.web.app/](https://thecodinginsight.web.app/)
 
