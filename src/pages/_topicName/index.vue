@@ -1,56 +1,13 @@
 <template>
   <!-- Topic container -->
   <div class="ma-0 pa-0">
-    <div class="mb-6 px-2">
-      <v-list-item class="pl-1">
-        <!-- Topic thumbnail -->
-        <v-list-item-avatar size="14%" left>
-          <v-img :src="getTopicFromTopicName.thumbnailLink" :alt="getTopicName + 'Thumbnail'" />
-        </v-list-item-avatar>
-        <span class="mr-4">
-          <!-- Topic name -->
-          <v-list-item-title class="font-weight-bold mb-1 topic-name">
-            <h1 class="font-weight-bold headline">{{ getTopicName }}</h1>
-          </v-list-item-title>
-          <!-- Topic followers count -->
-          <v-list-item-subtitle class="font-weight-light followers-count">
-            <span id="follow-count">{{ getTopicFromTopicName.followersCount }}</span>
-            <client-only>
-              <span
-                id="follow-count-increment"
-                style="display: none;"
-              >{{ getTopicFromTopicName.followersCount + 1 }}</span>
-              <span
-                id="follow-count-decrement"
-                style="display: none;"
-              >{{ getTopicFromTopicName.followersCount - 1 }}</span>
-              <span>Following</span>
-            </client-only>
-          </v-list-item-subtitle>
-        </span>
-        <v-list-item-action class="d-flex justify-center">
-          <v-btn id="follow-btn" small outlined @click="followTopic()">
-            Follow
-          </v-btn>
-          <v-btn
-            id="unfollow-btn"
-            small
-            color="primary"
-            class="elevation-0"
-            @click="unfollowTopic()"
-          >
-            Following
-          </v-btn>
-        </v-list-item-action>
-      </v-list-item>
-      <!-- Topic decription -->
-      <h3
-        class="font-weight-regular topic-description"
-        style="font-size: 18px;"
-      >
-        {{ getTopicFromTopicName.description }}
-      </h3>
-    </div>
+    <topic-header
+      :topic-name="getTopicFromTopicName.name"
+      :topic-description="getTopicFromTopicName.description"
+      :topic-thumbnail-link="getTopicFromTopicName.thumbnailLink"
+      :topic-followers-count="getTopicFromTopicName.followersCount"
+      :has-user-followed-topic="checkIfTopicIsFollowedByUser"
+    />
     <v-divider />
     <!-- All posts of topic -->
     <div class="posts-grid-container">
@@ -67,8 +24,8 @@
 </template>
 
 <script>
-import ClientOnly from 'vue-client-only'
 import PostCard from '~/components/PostCard'
+import TopicHeader from '~/components/TopicHeader'
 
 export default {
   name: 'TopicContainer',
@@ -76,7 +33,7 @@ export default {
   watchQuery: true,
   components: {
     PostCard,
-    ClientOnly
+    TopicHeader
   },
   async asyncData ({ app, params, error }) {
     try {
@@ -127,130 +84,6 @@ export default {
       // eslint-disable-next-line
       console.error(err);
       error({ statusCode: 404, message: '404 Not Found' })
-    }
-  },
-  computed: {
-    /**
-     * Returns formatted topic name.
-     */
-    getTopicName () {
-      return this.getTopicFromTopicName.name
-        .match(/[A-Z][a-z]+|[0-9]+/g)
-        .join(' ')
-    }
-  },
-  async mounted () {
-    /**
-     * Displays follow or unfollow button depending on the user.
-     */
-    const followed = await this.checkIfTopicIsFollowedByUser
-    const followBtn = document.getElementById('follow-btn')
-    const unfollowBtn = document.getElementById('unfollow-btn')
-
-    if (!followed) {
-      followBtn.style = 'display: initial;'
-    } else {
-      unfollowBtn.style = 'display: initial;'
-    }
-  },
-  methods: {
-    /**
-     * Makes currently signed in user follow the topic.
-     */
-    async followTopic () {
-      try {
-        if (
-          this.$cookies.get('__session') &&
-          this.$cookies.get('__session').uid != null
-        ) {
-          const followTopic = await this.$topicContainerViewModel.followTopic(
-            this.$cookies.get('__session').uid,
-            this.$route.params.topicName
-          )
-
-          if (!followTopic || followTopic === null) {
-            throw new Error('Some error occurred while following topic')
-          }
-
-          const followBtn = document.getElementById('follow-btn')
-          const unfollowBtn = document.getElementById('unfollow-btn')
-
-          followBtn.style = 'display: none;'
-          unfollowBtn.style = 'display: initial;'
-
-          const followCount = document.getElementById('follow-count')
-          const followCountIncrement = document.getElementById(
-            'follow-count-increment'
-          )
-          const followCountDecrement = document.getElementById(
-            'follow-count-decrement'
-          )
-
-          if (!this.checkIfTopicIsFollowedByUser) {
-            followCount.style = 'display: none;'
-            followCountIncrement.style = 'display: initial;'
-            followCountDecrement.style = 'display: none;'
-          } else {
-            followCount.style = 'display: initial;'
-            followCountIncrement.style = 'display: none;'
-            followCountDecrement.style = 'display: none;'
-          }
-        } else {
-          return this.$router.push('/signUp')
-        }
-      } catch (error) {
-        // eslint-disable-next-line
-        console.error(error);
-      }
-    },
-    /**
-     * Makes currently signed in user unfollow the topic.
-     */
-    async unfollowTopic () {
-      try {
-        if (
-          this.$cookies.get('__session') &&
-          this.$cookies.get('__session').uid != null
-        ) {
-          const unfollowTopic = await this.$topicContainerViewModel.unfollowTopic(
-            this.$cookies.get('__session').uid,
-            this.$route.params.topicName
-          )
-
-          if (!unfollowTopic || unfollowTopic === null) {
-            throw new Error('Some error occurred while unfollowing topic')
-          }
-
-          const followBtn = document.getElementById('follow-btn')
-          const unfollowBtn = document.getElementById('unfollow-btn')
-
-          followBtn.style = 'display: initial;'
-          unfollowBtn.style = 'display: none;'
-
-          const followCount = document.getElementById('follow-count')
-          const followCountIncrement = document.getElementById(
-            'follow-count-increment'
-          )
-          const followCountDecrement = document.getElementById(
-            'follow-count-decrement'
-          )
-
-          if (this.checkIfTopicIsFollowedByUser) {
-            followCount.style = 'display: none;'
-            followCountIncrement.style = 'display: none;'
-            followCountDecrement.style = 'display: initial;'
-          } else {
-            followCount.style = 'display: initial;'
-            followCountIncrement.style = 'display: none;'
-            followCountDecrement.style = 'display: none;'
-          }
-        } else {
-          return this.$router.push('/signUp')
-        }
-      } catch (error) {
-        // eslint-disable-next-line
-        console.error(error);
-      }
     }
   },
   head () {

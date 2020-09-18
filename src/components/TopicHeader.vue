@@ -1,60 +1,70 @@
 <template>
-  <!-- Topic Card component -->
-  <v-list-item>
-    <!-- Topic thumbnail -->
-    <v-list-item-avatar size="52px" left @click="navigateToTopic()">
-      <v-img :src="$props.topicThumbnailLink" :alt="getTopicName + ' Thumbnail'" />
-    </v-list-item-avatar>
-    <!-- Topic Data -->
-    <v-list-item-content>
-      <!-- Title of the topic -->
-      <v-list-item-title class="mb-0 pb-0 title" style="cursor: pointer;" @click="navigateToTopic()">
-        {{ getTopicName }}
-      </v-list-item-title>
-      <!-- Topic followers cound -->
-      <v-list-item-subtitle class="font-weight-light subtitle-1">
-        <span id="follow-count">{{ $props.topicFollowersCount }}</span>
-        <client-only>
-          <span
-            id="follow-count-increment"
-            style="display: none;"
-          >{{ $props.topicFollowersCount + 1 }}</span>
-          <span
-            id="follow-count-decrement"
-            style="display: none;"
-          >{{ $props.topicFollowersCount - 1 }}</span>
-        </client-only>
-        <span>Following</span>
-      </v-list-item-subtitle>
-    </v-list-item-content>
-    <!-- Topic Follow/Unfollow button -->
-    <v-list-item-action class="d-flex justify-center">
-      <v-btn id="follow-btn" small outlined @click="followTopic()">
-        Follow
-      </v-btn>
-      <v-btn
-        id="unfollow-btn"
-        small
-        color="primary"
-        class="elevation-0"
-        @click="unfollowTopic()"
-      >
-        Following
-      </v-btn>
-    </v-list-item-action>
-  </v-list-item>
+  <div class="mb-6 px-2">
+    <v-list-item class="pl-1">
+      <!-- Topic thumbnail -->
+      <v-list-item-avatar size="14%" left>
+        <v-img :src="topicThumbnailLink" :alt="getTopicName + ' Thumbnail'" />
+      </v-list-item-avatar>
+      <span class="mr-4">
+        <!-- Topic name -->
+        <v-list-item-title class="font-weight-bold mb-1 topic-name">
+          <h1 class="font-weight-bold headline">{{ getTopicName }}</h1>
+        </v-list-item-title>
+        <!-- Topic followers count -->
+        <v-list-item-subtitle class="font-weight-light followers-count">
+          <span id="follow-count">{{ topicFollowersCount }}</span>
+          <client-only>
+            <span
+              id="follow-count-increment"
+              style="display: none;"
+            >{{ topicFollowersCount + 1 }}</span>
+            <span
+              id="follow-count-decrement"
+              style="display: none;"
+            >{{ topicFollowersCount - 1 }}</span>
+            <span>Following</span>
+          </client-only>
+        </v-list-item-subtitle>
+      </span>
+      <v-list-item-action class="d-flex justify-center">
+        <v-btn id="follow-btn" small outlined @click="followTopic()">
+          Follow
+        </v-btn>
+        <v-btn
+          id="unfollow-btn"
+          small
+          color="primary"
+          class="elevation-0"
+          @click="unfollowTopic()"
+        >
+          Following
+        </v-btn>
+      </v-list-item-action>
+    </v-list-item>
+    <!-- Topic decription -->
+    <h3
+      class="font-weight-regular topic-description"
+      style="font-size: 18px;"
+    >
+      {{ topicDescription }}
+    </h3>
+  </div>
 </template>
 
 <script>
 import ClientOnly from 'vue-client-only'
 
 export default {
-  name: 'TopicCard',
+  name: 'TopicHeader',
   components: {
     ClientOnly
   },
   props: {
     topicName: {
+      type: String,
+      default: null
+    },
+    topicDescription: {
       type: String,
       default: null
     },
@@ -201,8 +211,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#follow-btn,
-#unfollow-btn {
-  display: none;
-}
+
 </style>

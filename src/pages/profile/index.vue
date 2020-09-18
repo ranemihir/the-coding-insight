@@ -1,17 +1,12 @@
 <template>
   <!-- User profile page -->
   <div class="main-wrapper ma-0 pa-0">
-    <!-- User profile info -->
-    <div class="d-flex flex-column align-center justify-space-between mb-8">
-      <!-- User avatar -->
-      <v-avatar class="mb-4" size="80">
-        <img :src="currentUser.photoURL" :alt="currentUser.displayName">
-      </v-avatar>
-      <!-- full name of user -->
-      <span class="headline font-weight-bold">{{ currentUser.displayName }}</span>
-      <!-- user email -->
-      <span class="subtitle-1" style="color: grey;">{{ currentUser.email }}</span>
-    </div>
+    <!-- User profile component-->
+    <user-profile
+      :photo-u-r-l="currentUser.photoURL"
+      :display-name="currentUser.displayName"
+      :email="currentUser.email"
+    />
     <!-- Tabs for showing saved posts by user and followed topics -->
     <v-tabs v-model="tab" background-color="#121212">
       <v-tab>Saved Posts</v-tab>
@@ -50,6 +45,7 @@
 <script>
 import PostCard from '~/components/PostCard'
 import TopicCard from '~/components/TopicCard'
+import UserProfile from '~/components/UserProfile'
 
 export default {
   name: 'Profile',
@@ -57,7 +53,8 @@ export default {
   middleware: 'auth',
   components: {
     PostCard,
-    TopicCard
+    TopicCard,
+    UserProfile
   },
   async asyncData ({ app, params, error }) {
     try {
