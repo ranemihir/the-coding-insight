@@ -1,5 +1,6 @@
-<img style="width: 100%" alt="The Coding Insight Logo" src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/GitVector.svg?alt=media&token=73612b13-5072-4e0e-8b0f-baea8a7c238b">
-
+<p align="center">
+    <img width="800" alt="The Coding Insight Logo" src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/GitVector.svg?alt=media&token=73612b13-5072-4e0e-8b0f-baea8a7c238b">
+</p>
 # The Coding Insight
 The Coding Insight is a blogging website about technology and computer programming.
 
