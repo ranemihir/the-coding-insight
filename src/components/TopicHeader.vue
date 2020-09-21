@@ -2,7 +2,7 @@
   <div class="mb-6 px-2">
     <v-list-item class="pl-1">
       <!-- Topic thumbnail -->
-      <v-list-item-avatar size="14%" left>
+      <v-list-item-avatar size="14%" style="border-radius: 0;" left>
         <v-img :src="topicThumbnailLink" :alt="getTopicName + ' Thumbnail'" />
       </v-list-item-avatar>
       <span class="mr-4">
@@ -43,7 +43,7 @@
     </v-list-item>
     <!-- Topic decription -->
     <h3
-      class="font-weight-regular topic-description"
+      class="font-weight-regular topic-description mt-3"
       style="font-size: 18px;"
     >
       {{ topicDescription }}
@@ -86,7 +86,7 @@ export default {
      * Returns formatted topic name.
      */
     getTopicName () {
-      return this.$props.topicName.match(/[A-Z][a-z]+|[0-9]+/g).join(' ')
+      return this.$props.topicName.match(/[A-Z][a-z 0-9]+/g).join(' ')
     }
   },
   mounted () {

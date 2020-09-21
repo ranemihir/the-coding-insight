@@ -4,7 +4,8 @@ const { Nuxt } = require('nuxt');
  * Sets mode to production.
  */
 const config = {
-    dev: false
+    dev: false,
+    debug: true
 };
 
 /**

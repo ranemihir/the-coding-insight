@@ -2,7 +2,7 @@
   <!-- Topic Card component -->
   <v-list-item>
     <!-- Topic thumbnail -->
-    <v-list-item-avatar size="52px" left @click="navigateToTopic()">
+    <v-list-item-avatar size="8%" style="border-radius: 0;" left @click="navigateToTopic()">
       <v-img :src="$props.topicThumbnailLink" :alt="getTopicName + ' Thumbnail'" />
     </v-list-item-avatar>
     <!-- Topic Data -->
@@ -11,8 +11,8 @@
       <v-list-item-title class="mb-0 pb-0 title" style="cursor: pointer;" @click="navigateToTopic()">
         {{ getTopicName }}
       </v-list-item-title>
-      <!-- Topic followers cound -->
-      <v-list-item-subtitle class="font-weight-light subtitle-1">
+      <!-- Topic followers count -->
+      <v-list-item-subtitle class="font-weight-light body-2">
         <span id="follow-count">{{ $props.topicFollowersCount }}</span>
         <client-only>
           <span
@@ -76,19 +76,7 @@ export default {
      * Returns formatted topic name.
      */
     getTopicName () {
-      return this.$props.topicName.match(/[A-Z][a-z]+|[0-9]+/g).join(' ')
-    }
-  },
-  mounted () {
-    const followBtn = document.getElementById('follow-btn')
-    const unfollowBtn = document.getElementById('unfollow-btn')
-
-    if (!this.$props.hasUserFollowedTopic) {
-      followBtn.style = 'display: initial;'
-      unfollowBtn.style = 'display: none;'
-    } else {
-      followBtn.style = 'display: none;'
-      unfollowBtn.style = 'display: initial;'
+      return this.$props.topicName.match(/[A-Z][a-z 0-9]+/g).join(' ')
     }
   },
   methods: {
@@ -201,8 +189,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#follow-btn,
-#unfollow-btn {
+#follow-btn{
   display: none;
+}
+
+#unfollow-btn {
+  display: initial;
 }
 </style>

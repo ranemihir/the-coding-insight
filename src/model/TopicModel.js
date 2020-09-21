@@ -122,7 +122,7 @@ class TopicModel extends Model {
         name: topicInput.name,
         description: topicInput.description,
         thumbnailLink: topicInput.thumbnailLink,
-        creationTime: FieldValue.serverTimestamp().toDate(),
+        creationTime: new Date().toISOString(),
         followersCount: await this.getFollowersCountOnTopic(topicInput.name)
       }
     } catch (error) {

@@ -1,4 +1,4 @@
 # Ignore admin related files and pages
-pages/createTopic
-pages/postEditor
-middleware/admin.js
+# pages/createTopic
+# pages/postEditor
+# middleware/admin.js

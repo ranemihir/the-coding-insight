@@ -137,7 +137,7 @@ export default {
           /**
            * Redirect to '/' route adter topic is successfully created.
            */
-          if (createTopic && createTopic !== null) {
+          if (createTopic && createTopic != null) {
             return this.$router.push('/')
           } else {
             throw new Error('Topic creation failed.')
