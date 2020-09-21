@@ -2,7 +2,7 @@
   <div class="mb-6 px-2">
     <v-list-item class="pl-1">
       <!-- Topic thumbnail -->
-      <v-list-item-avatar size="14%" style="border-radius: 0;" left>
+      <v-list-item-avatar size="12%" style="border-radius: 0;" left>
         <v-img :src="topicThumbnailLink" :alt="getTopicName + ' Thumbnail'" />
       </v-list-item-avatar>
       <span class="mr-4">
@@ -211,5 +211,93 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#follow-btn,
+#unfollow-btn {
+  display: none;
+}
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .topic-name {
+    font-size: 20px;
+  }
+
+  .followers-count {
+    font-size: 12px;
+  }
+
+  .topic-description {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .topic-name {
+    font-size: 24px;
+  }
+
+  .followers-count {
+    font-size: 12px;
+  }
+
+  .topic-description {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .topic-name {
+    font-size: 34px;
+  }
+
+  .followers-count {
+    font-size: 16px;
+  }
+
+  .topic-description {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .topic-name {
+    font-size: 34px;
+  }
+
+  .followers-count {
+    font-size: 16px;
+  }
+
+  .topic-description {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .topic-name {
+    font-size: 34px;
+  }
+
+  .followers-count {
+    font-size: 16px;
+  }
+
+  .topic-description {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}
 </style>

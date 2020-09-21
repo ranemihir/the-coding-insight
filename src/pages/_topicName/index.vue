@@ -104,27 +104,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#follow-btn,
-#unfollow-btn {
-  display: none;
-}
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .topic-name {
-    font-size: 20px;
-  }
-
-  .followers-count {
-    font-size: 12px;
-  }
-
-  .topic-description {
-    font-size: 16px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
   .posts-grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -140,20 +121,6 @@ export default {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .topic-name {
-    font-size: 24px;
-  }
-
-  .followers-count {
-    font-size: 12px;
-  }
-
-  .topic-description {
-    font-size: 16px;
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
   .posts-grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -169,20 +136,6 @@ export default {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .topic-name {
-    font-size: 34px;
-  }
-
-  .followers-count {
-    font-size: 16px;
-  }
-
-  .topic-description {
-    font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
   .posts-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -198,20 +151,6 @@ export default {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .topic-name {
-    font-size: 34px;
-  }
-
-  .followers-count {
-    font-size: 16px;
-  }
-
-  .topic-description {
-    font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
   .posts-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -227,20 +166,6 @@ export default {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .topic-name {
-    font-size: 34px;
-  }
-
-  .followers-count {
-    font-size: 16px;
-  }
-
-  .topic-description {
-    font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 16px;
-  }
-
   .posts-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
