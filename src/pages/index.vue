@@ -1,7 +1,7 @@
 <template>
   <div class="ma-0 pa-0">
     <div class="main d-flex flex-column justify-center content-padding">
-      <h1 class="main-title mb-4">
+      <h1 class="main-title font-weight-bold mb-4">
         Take A Deeper Insight Into The World of Programming.
       </h1>
       <h3 class="mb-8 font-weight-regular sub-header">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="second-slide content-padding d-flex flex-column justify-center ">
-      <h3 class="text-center mt-12 mb-8 font-weight-bold text-h5">
+      <h3 class="text-center mt-12 mb-8 font-weight-bold text-h6">
         Select the technologies that interest you. We'll help you find great articles to read.
       </h3>
       <div class="mb-8 topics-grid-container">

@@ -9,8 +9,8 @@
       </h4>
     </div>
     <!-- Sign In With Google button -->
-    <div class="d-flex flex-column justify-center align-center">
-      <v-img src="/google-signin-btn.png" alt="Google Sign In Button" class="signin-btn elevation-4" @click="signInWithGoogle()" />
+    <div class="ma-0 pa-0 d-flex flex-column justify-center align-center">
+      <img src="/google-signin-btn.png" alt="Google Sign In Button" class="signin-btn" @click="signInWithGoogle()">
     </div>
   </div>
 </template>
@@ -85,7 +85,7 @@ export default {
 .signin-btn {
   cursor: pointer;
   width: 200px;
-  height: 40px;
+  height: 48px;
   border-radius: 4px;
 }
 
