@@ -6,7 +6,7 @@
       <v-img :src="$props.topicThumbnailLink" :alt="getTopicName + ' Thumbnail'" />
     </v-avatar>
     <!-- Title of the topic -->
-    <span class="topic-name text-center my-2">
+    <span class="topic-name text-center my-2 text-button">
       {{ getTopicName }}
     </span>
   </span>

@@ -1,9 +1,17 @@
 <template>
-  <div class="ma-0 pa-0">
+  <div class="content-padding text-center d-flex flex-column justify-center main">
+    <div class="mb-8">
+      <h1 class="text-h3 mb-8 font-weight-bold">
+        Join The Coding Insight.
+      </h1>
+      <h4 class="text-h5 mb-2">
+        Sign in to be able to <b>Like</b> and <b>Save</b> articles to read later. Also, get exclusive member-only content.
+      </h4>
+    </div>
     <!-- Sign In With Google button -->
-    <v-btn class="d-flex flex-row justify-space-between" @click="signInWithGoogle()">
-      <span>Sign in with Google</span>
-    </v-btn>
+    <div class="d-flex flex-column justify-center align-center">
+      <v-img src="/google-signin-btn.png" alt="Google Sign In Button" class="signin-btn elevation-4" @click="signInWithGoogle()" />
+    </div>
   </div>
 </template>
 
@@ -13,7 +21,7 @@ import getFirebase from '~/plugins/firebase'
 
 export default {
   name: 'SignUp',
-  layout: 'default',
+  layout: 'home',
   middleware: 'signUp',
   methods: {
     /**
@@ -68,4 +76,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.main {
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.signin-btn {
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main{
+    background-image: url('/Background-Mobile.svg');
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .main{
+    background-image: url('/Background-Mobile.svg');
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .main{
+    background-image: url('/Background-Desktop.svg');
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .main{
+    background-image: url('/Background-Desktop.svg');
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main{
+    background-image: url('/Background-Desktop.svg');
+  }
+}
+
 </style>

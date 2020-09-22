@@ -19,7 +19,7 @@
     </div>
 
     <div class="second-slide content-padding d-flex flex-column justify-center ">
-      <h3 class="text-center mt-12 mb-8 font-weight-regular instruction">
+      <h3 class="text-center mt-12 mb-8 font-weight-bold text-h5">
         Select the technologies that interest you. We'll help you find great articles to read.
       </h3>
       <div class="mb-8 topics-grid-container">
@@ -76,13 +76,8 @@ export default {
 .main{
   height: 90vh;
   background-color: #000000;
-  background-image: url('/background.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.second-slide{
-  background-color: #000f29;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -99,6 +94,10 @@ export default {
     align-content: stretch;
   }
 
+  .main{
+    background-image: url('/Background-Mobile.svg');
+  }
+
   .second-slide{
     height: 120vh;
   }
@@ -109,10 +108,6 @@ export default {
 
   .sub-header{
     font-size: 16px;
-  }
-
-  .instruction{
-    font-size: 12px;
   }
 }
 
@@ -130,6 +125,10 @@ export default {
     align-content: stretch;
   }
 
+  .main{
+    background-image: url('/Background-Mobile.svg');
+  }
+
   .second-slide{
     height: 120vh;
   }
@@ -140,10 +139,6 @@ export default {
 
   .sub-header{
     font-size: 18px;
-  }
-
-  .instruction{
-    font-size: 12px;
   }
 }
 
@@ -161,6 +156,10 @@ export default {
     align-content: stretch;
   }
 
+  .main{
+    background-image: url('/Background-Desktop.svg');
+  }
+
   .second-slide{
     height: 120vh;
   }
@@ -171,10 +170,6 @@ export default {
 
   .sub-header{
     font-size: 20px;
-  }
-
-  .instruction{
-    font-size: 16px;
   }
 }
 
@@ -192,6 +187,10 @@ export default {
     align-content: stretch;
   }
 
+  .main{
+    background-image: url('/Background-Desktop.svg');
+  }
+
   .second-slide{
     height: 100vh;
   }
@@ -202,10 +201,6 @@ export default {
 
   .sub-header{
     font-size: 20px;
-  }
-
-  .instruction{
-    font-size: 16px;
   }
 }
 
@@ -223,6 +218,10 @@ export default {
     align-content: stretch;
   }
 
+  .main{
+    background-image: url('/Background-Desktop.svg');
+  }
+
   .second-slide{
     height: 100vh;
   }
@@ -233,10 +232,6 @@ export default {
 
   .sub-header{
     font-size: 20px;
-  }
-
-  .instruction{
-    font-size: 16px;
   }
 }
 </style>
