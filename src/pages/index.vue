@@ -1,31 +1,35 @@
 <template>
   <div class="ma-0 pa-0">
-    <h1 class="text-center main-title mb-8">
-      Take a deeper insight into the world of programming.
-    </h1>
-
-    <h3 class="text-center mt-2 text-body-1">
-      Select the technologies that interest you. We'll help you find great articles to read.
-    </h3>
-    <div class="mb-8 topics-grid-container">
-      <span v-for="topic in getAllTopics" :key="topic.name" class="ma-2 pa-2">
-        <topic-badge
-          :topic-name="topic.name"
-          :topic-thumbnail-link="topic.thumbnailLink"
-        />
-      </span>
-    </div>
-
-    <div class="d-flex flex-column align-center mb-12">
+    <div class="main d-flex flex-column justify-center content-padding">
+      <h1 class="main-title mb-4">
+        Take A Deeper Insight Into The World of Programming.
+      </h1>
+      <h3 class="mb-8 font-weight-regular sub-header">
+        "Programming isn't about what you know; it's about what you can figure out."
+      </h3>
       <v-btn
         color="primary"
-        class="text-h6"
-        width="200"
-        x-large
+        class="font-weight-bold mb-12"
+        width="120"
+        large
         @click="navigateToSignUp()"
       >
         Join Us
       </v-btn>
+    </div>
+
+    <div class="second-slide content-padding d-flex flex-column justify-center ">
+      <h3 class="text-center mt-12 mb-8 font-weight-regular instruction">
+        Select the technologies that interest you. We'll help you find great articles to read.
+      </h3>
+      <div class="mb-8 topics-grid-container">
+        <span v-for="topic in getAllTopics" :key="topic.name" class="ma-2 pa-2">
+          <topic-badge
+            :topic-name="topic.name"
+            :topic-thumbnail-link="topic.thumbnailLink"
+          />
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +38,7 @@
 import TopicBadge from '~/components/TopicBadge'
 
 export default {
-  layout: 'default',
+  layout: 'home',
   middleware: 'home',
   components: {
     TopicBadge
@@ -69,6 +73,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.main{
+  height: 90vh;
+  background-color: #000000;
+  background-image: url('/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.second-slide{
+  background-color: #000f29;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .topics-grid-container {
@@ -83,8 +99,20 @@ export default {
     align-content: stretch;
   }
 
+  .second-slide{
+    height: 120vh;
+  }
+
   .main-title{
     font-size: 28px;
+  }
+
+  .sub-header{
+    font-size: 16px;
+  }
+
+  .instruction{
+    font-size: 12px;
   }
 }
 
@@ -102,8 +130,20 @@ export default {
     align-content: stretch;
   }
 
+  .second-slide{
+    height: 120vh;
+  }
+
   .main-title{
     font-size: 48px;
+  }
+
+  .sub-header{
+    font-size: 18px;
+  }
+
+  .instruction{
+    font-size: 12px;
   }
 }
 
@@ -121,8 +161,20 @@ export default {
     align-content: stretch;
   }
 
+  .second-slide{
+    height: 120vh;
+  }
+
   .main-title{
     font-size: 48px;
+  }
+
+  .sub-header{
+    font-size: 20px;
+  }
+
+  .instruction{
+    font-size: 16px;
   }
 }
 
@@ -140,8 +192,20 @@ export default {
     align-content: stretch;
   }
 
+  .second-slide{
+    height: 100vh;
+  }
+
   .main-title{
     font-size: 48px;
+  }
+
+  .sub-header{
+    font-size: 20px;
+  }
+
+  .instruction{
+    font-size: 16px;
   }
 }
 
@@ -159,8 +223,20 @@ export default {
     align-content: stretch;
   }
 
+  .second-slide{
+    height: 100vh;
+  }
+
   .main-title{
     font-size: 48px;
+  }
+
+  .sub-header{
+    font-size: 20px;
+  }
+
+  .instruction{
+    font-size: 16px;
   }
 }
 </style>
