@@ -5,6 +5,7 @@ import CreateTopicViewModel from '~/viewmodel/CreateTopicViewModel'
 import PostEditorViewModel from '~/viewmodel/PostEditorViewModel'
 import TopicContainerViewModel from '~/viewmodel/TopicContainerViewModel'
 import UserProfileViewModel from '~/viewmodel/UserProfileViewModel'
+import HomeViewModel from '~/viewmodel/HomeViewModel'
 
 import env from '~/environment/env'
 
@@ -19,5 +20,6 @@ export default ({ app }, inject) => {
   inject('postEditorViewModel', PostEditorViewModel)
   inject('createBlogPost', createBlogPost)
   inject('uploadImageToFirebase', uploadImageToFirebase)
+  inject('homeViewModel', HomeViewModel)
   inject('env', env)
 }

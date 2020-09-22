@@ -8,7 +8,7 @@
     <!-- Topic Data -->
     <v-list-item-content>
       <!-- Title of the topic -->
-      <v-list-item-title class="mb-0 pb-0 title" style="cursor: pointer;" @click="navigateToTopic()">
+      <v-list-item-title class="mb-0 pb-0 text-subtitle-1 font-weight-bold" style="cursor: pointer;" @click="navigateToTopic()">
         {{ getTopicName }}
       </v-list-item-title>
       <!-- Topic followers count -->

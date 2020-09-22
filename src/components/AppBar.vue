@@ -60,7 +60,9 @@
               <!-- Navigates to My Profile -->
               <v-list-item @click="navigateToProfile()">
                 <v-list-item-content>
-                  <v-list-item-title>My Profile</v-list-item-title>
+                  <v-list-item-title class="font-weight-medium">
+                    My Profile
+                  </v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-action />
               </v-list-item>

@@ -1,11 +1,12 @@
 /* main font styles */
-// $body-font-family: "Roboto";
-// $title-font: "Roboto";
+
+$body-font-family: "SFPro";
+$title-font: "SFPro";
 
 .v-application {
-    // font-family: $body-font-family, sans-serif !important;
+    font-family: $body-font-family, sans-serif !important;
 
     .title .headline .display-1 .display-2 .display-3 .display-4 .display-5 {
-        // font-family: $title-font, sans-serif !important;
+        font-family: $title-font, sans-serif !important;
     }
 }
