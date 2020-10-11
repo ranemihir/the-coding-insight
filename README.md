@@ -8,86 +8,41 @@ The Coding Insight is a blogging website about technology and computer programmi
 
 ## Screenshots
 
-### Desktop
-
 <table>
-
-<tr>
-    <td>
-        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fhome.png?alt=media&token=5955d58c-2b0b-48e1-bd26-89f32b195cbb" />
+  <tr>
+     <td>
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Fhome-m.png?alt=media&token=b0a134fa-2e33-4def-ad67-0bf2fee8601a" />
     </td>
     <td>
-        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fhome2.png?alt=media&token=8a8c2fb6-6063-435c-aca3-e2775a9005d8" /> 
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Fhome2-m.png?alt=media&token=47f86e32-aff3-4561-9dd1-ee0505674d89" /> 
     </td>
     <td>
-        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fsignup.png?alt=media&token=517da811-a4cf-4548-ab41-f61d2e1f5f03"  />
-    </td>
-</tr>
-
-<tr>
-    <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fprofile1.png?alt=media&token=2186849f-e41a-4575-a275-45ec5d35ba7b" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Fsignup-m.png?alt=media&token=cf49a701-0460-415e-84f3-412ce1d4c446"  />
     </td>
     <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fprofile2.png?alt=media&token=c4043e56-ffd9-4656-a591-6a4402fedecc" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Fprofile1-m.png?alt=media&token=b6890875-fdd4-429e-8b83-d6a5f9e11846"  />
     </td>
     <td>
-       <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Ftopic.png?alt=media&token=b1e50347-f879-42a9-8b70-f13b17335751" /> 
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Fprofile2-m.png?alt=media&token=b29e8f2a-a58c-4223-aafa-2c563414329a"  />
     </td>
-</tr>
-
-<tr>
+  </tr>
+  <tr>
     <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fblog.png?alt=media&token=8b25bff5-5a25-48c3-86a2-09bf552961f6" />
-    </td>
-    <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fgist.png?alt=media&token=02a2b9ef-8d15-4239-8e12-da0b4e44297d" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Ffeed-m.png?alt=media&token=44314792-d6d3-4c03-a16a-a39127d4171c" />
     </td>
     <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Flike.png?alt=media&token=a56901b1-d8d5-4313-a7bd-8efa3d581dcf" /> 
-    </td>
-</tr>
-</table>
-
-### Mobile
-
-<table>
-
-<tr>
-    <td>
-        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fhome.png?alt=media&token=5955d58c-2b0b-48e1-bd26-89f32b195cbb" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Ftopic-m.png?alt=media&token=f24c09bc-c095-4f02-9d6b-6f0db4d88988" /> 
     </td>
     <td>
-        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fhome2.png?alt=media&token=8a8c2fb6-6063-435c-aca3-e2775a9005d8" /> 
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Fblog-m.png?alt=media&token=834f7f72-e516-4162-82cc-94abc14e71a1"  />
     </td>
     <td>
-        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fsignup.png?alt=media&token=517da811-a4cf-4548-ab41-f61d2e1f5f03"  />
-    </td>
-</tr>
-
-<tr>
-    <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fprofile1.png?alt=media&token=2186849f-e41a-4575-a275-45ec5d35ba7b" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Fgist-m.png?alt=media&token=e90f4940-9118-4883-8fac-112b0a1fbf06"  />
     </td>
     <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fprofile2.png?alt=media&token=c4043e56-ffd9-4656-a591-6a4402fedecc" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fmobile%2Flike-m.png?alt=media&token=82b3be97-ed56-4e2a-914a-4334b7a0fa48"  />
     </td>
-    <td>
-       <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Ftopic.png?alt=media&token=b1e50347-f879-42a9-8b70-f13b17335751" /> 
-    </td>
-</tr>
-
-<tr>
-    <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fblog.png?alt=media&token=8b25bff5-5a25-48c3-86a2-09bf552961f6" />
-    </td>
-    <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Fgist.png?alt=media&token=02a2b9ef-8d15-4239-8e12-da0b4e44297d" />
-    </td>
-    <td>
-      <img src="https://firebasestorage.googleapis.com/v0/b/thecodinginsight.appspot.com/o/screenshots%2Fdesktop%2Flike.png?alt=media&token=a56901b1-d8d5-4313-a7bd-8efa3d581dcf" /> 
-    </td>
-</tr>
+  </tr>
 </table>
 
 ## Lighthouse Performance Metrics
