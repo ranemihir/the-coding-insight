@@ -69,7 +69,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.post-card {
-  cursor: pointer;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .post-card {
+    cursor: pointer;
+  }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .post-card {
+    cursor: pointer;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .post-card {
+    cursor: pointer;
+    height: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .post-card {
+    cursor: pointer;
+    height: 100%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .post-card {
+    cursor: pointer;
+    height: 100%;
+  }
+}
+
 </style>

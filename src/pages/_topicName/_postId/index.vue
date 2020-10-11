@@ -465,14 +465,14 @@ export default {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .blog-title-font {
-    font-size: 34px;
+    font-size: 40px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .blog-title-font {
-    font-size: 34px;
+    font-size: 40px;
   }
 }
 
