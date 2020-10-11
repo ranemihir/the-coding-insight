@@ -61,3 +61,7 @@ The Coding Insight is a blogging website about technology and computer programmi
 - Instead of using the default Firebase authentication, a custom authentication system based on the Firbase documentation is implemented.
 
 - A WYSIWYG editor called [**Editor.js**](https://editorjs.io/) is used for writing and editing post whose exclusive authorization is given to only the admin of the website.
+
+- The app is build as a **PWA (Progressive Web App)** which basically means it could be installed natively, just like a normal app. It uses service worker for doing baclground tasks, using Indexed DB and an app manifest file which provides metadata about the app.
+
+- **Cache Then Network** strategy is used for client side caching which means the data will first be searched in the cache (indexed DB in this scenario) and if it is not available then it will be fetched from the server by making a request and the cached version of the data is updated along the way.
