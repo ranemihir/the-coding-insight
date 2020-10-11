@@ -5,6 +5,7 @@
 # The Coding Insight
 The Coding Insight is a blogging website about technology and computer programming.
 
+Blog articles are organised according to different topics. Users can register using Google sign in to follow these topics and checkout new content. Users can also like the blog articles and save them so that they can read them anytime later. 
 
 ## Screenshots
 
