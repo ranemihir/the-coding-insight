@@ -6,7 +6,6 @@
       alt="The Coding Insight Logo"
       src="/logo.svg"
       class="elevation-2 logo"
-      style="cursor: pointer; border-radius: 8.7px;"
       @click="navigateToHome()"
     >
 
@@ -159,7 +158,9 @@ export default {
 
 <style lang="scss" scoped>
 .logo {
+  cursor: pointer;
   width: 64px;
   height: 63px;
+  border-radius: 8.7px;
 }
 </style>

@@ -7,16 +7,19 @@
         <nuxt />
       </div>
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
 import AppBar from '~/components/AppBar'
+import Footer from '~/components/Footer'
 
 export default {
   name: 'Default',
   components: {
-    AppBar
+    AppBar,
+    Footer
   }
 }
 </script>
