@@ -1,23 +1,10 @@
 <template>
   <!-- Footer main container -->
   <v-footer padless class="main">
-    <!-- Footer card component -->
-    <v-card flat tile>
-      <div class="content-padding">
-        <!-- Text content -->
-        <v-card-text class="pa-0 pt-1 pb-4 text-body-1">
-          <p>
-            <b>The Coding Insight</b> is a blogging website about technology and computer programming.
-          </p>
-          <p>Blog articles are organised according to different topics. Users can register using Google sign in to follow these topics and checkout new content. Users can also like the blog articles and save them so that they can read them anytime later.</p>
-        </v-card-text>
-      </div>
-
-      <v-divider />
-      <!-- Creator's Label -->
-      <v-card-text class="text-center">
-        Designed and Created by <b>Mihir Rane</b>
-      </v-card-text>
+    <!-- Creator's Label -->
+    <v-card-text class="text-center">
+      Designed and Created by <b>Mihir Rane</b>
+    </v-card-text>
     </v-card>
   </v-footer>
 </template>
